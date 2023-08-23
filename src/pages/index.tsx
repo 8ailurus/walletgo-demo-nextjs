@@ -1,6 +1,7 @@
 import {
   ConnectButton,
   RoninExtConnector,
+  SupportedChainIds,
   WalletWidget,
   createDefaultWallets,
   useWalletgo,
@@ -26,7 +27,7 @@ const WalletGo: NextPage = () => {
             icons: ["https://cdn.skymavis.com/explorer-cdn/asset/favicon/apple-touch-icon.png"],
             url: "https://app.roninchain.com",
           },
-          noGnosisSafe: true,
+          defaultChainId: SupportedChainIds.RoninTestnet,
         })}
         dialogProps={{
           mask: true,

@@ -1,6 +1,6 @@
 import "src/styles/global.css"
 
-import { WalletgoProvider } from "@roninnetwork/walletgo"
+import { SupportedChainIds, WalletgoProvider } from "@roninnetwork/walletgo"
 import App, { AppContext, AppProps } from "next/app"
 import Head from "next/head"
 import { WidgetOpenProvider } from "src/components/WalletConnect"
@@ -35,7 +35,7 @@ const NextApp = (props: AppProps) => {
         <meta key="og:image:alt" property="og:image:alt" content="Visit roninchain.com" />
       </Head>
 
-      <WalletgoProvider defaultChainId={2020}>
+      <WalletgoProvider defaultChainId={SupportedChainIds.RoninTestnet}>
         <WidgetOpenProvider>
           <Component {...pageProps} />
         </WidgetOpenProvider>
